@@ -12,4 +12,5 @@ for (let i = 0; i < element.length; i++) {
 document.addEventListener('mousemove', function (e) {
   text.style.left = e.pageX + 'px';
   text.style.top = e.pageY + 'px';
+  text.style.transform = `rotate(${e.pageX / 2}deg) rotate(${e.pageY / 2}deg)`;
 });
