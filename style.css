@@ -21,4 +21,22 @@ body {
   text-align: center;
   pointer-events: none;
   user-select: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+  animation: animateColor 5s linear infinite;
+}
+
+body:hover .text {
+  opacity: 1;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+      hue-rotate(0deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+      hue-rotate(360deg);
+  }
 }
